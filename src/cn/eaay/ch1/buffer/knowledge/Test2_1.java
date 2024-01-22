@@ -1,15 +1,16 @@
-package cn.eaay.ch1.buffer;
+package cn.eaay.ch1.buffer.knowledge;
 
 import java.nio.ByteBuffer;
 
-public class Test1_2 {
+public class Test2_1 {
     public static void main(String[] args) {
         byte[] byteArray = new byte[]{1, 2, 3};
         ByteBuffer byteBuffer = ByteBuffer.wrap(byteArray);
+        byteBuffer.limit(2);
         try {
-            byteBuffer = (ByteBuffer) byteBuffer.limit(-1);
+            byteBuffer.position(3);
         } catch (IllegalArgumentException e) {
-            System.out.println("ByteBuffer 限制 limit 大小不能为负数");
+            System.out.println("ByteBuffer 的 position 位置不能大于其 limit 限制");
         }
     }
 }

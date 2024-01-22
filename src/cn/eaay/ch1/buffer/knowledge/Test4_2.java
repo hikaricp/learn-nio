@@ -1,4 +1,4 @@
-package cn.eaay.ch1.buffer;
+package cn.eaay.ch1.buffer.knowledge;
 
 import java.nio.ByteBuffer;
 import java.nio.InvalidMarkException;
